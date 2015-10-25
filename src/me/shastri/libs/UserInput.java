@@ -1,10 +1,15 @@
 /**
  *
  * Author:              Shastri Harrinanan
- * Version:             1.0.0.0
- * Project Revision:    N/A
+ * Version:             1.0.1.0
+ * Project Revision:    #001
  * Date Created:        22/10/2015
- * Date Modified:       N/A
+ * Date Modified:       25/10/2015
+ * 
+ * Commit Log:
+ * #001 22/10/2015 0.0.0.0 - 0.1.0.0: Add date functionality
+ * 
+ * Current Status: Under Construction.
  * 
  */
 
