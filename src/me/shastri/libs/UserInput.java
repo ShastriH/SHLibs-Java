@@ -12,6 +12,11 @@ package me.shastri.libs;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class UserInput {
@@ -32,5 +37,19 @@ public class UserInput {
     
     public static double reqDouble(String prompt){
         return Double.parseDouble(reqString(prompt));
+    }
+    
+    public static Date reqDate(String prompt){
+        java.util.Date date = null;
+        java.sql.Date sqlDate = null;
+        String userDate = reqString(prompt + "\nPlease enter the date in the format dd-mm-yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        try {
+            date = sdf.parse(userDate);
+        } catch (ParseException e) {
+            System.err.println(e);
+        }
+        if(date != null) sqlDate = new java.sql.Date(date.getTime());
+        return sqlDate;
     }
 }
